@@ -1,0 +1,37 @@
+/* PHASE 9: Forms */
+
+.input {
+  float: right;
+  width: 500px;
+  background-color: lightgray;
+  border-radius: 5px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.content-main a {
+  float: left;
+}
+
+.input label {
+  display: block;
+  font-weight: 700;
+}
+
+.input input[type="text"], .input input[type="text-box"] {
+  display: block;
+  background-color: white;
+  margin: 5px 0 20px 0;
+  width:100%;
+}
+
+.input input[type="submit"] {
+  background-color: limegreen;
+  color:white;
+  border-radius: 5px;
+  padding: 10px 12px;
+  font-weight: 700;
+  box-shadow: 0 3px green;
+}
