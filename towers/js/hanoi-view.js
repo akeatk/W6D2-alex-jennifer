@@ -10,8 +10,12 @@ class HanoiView {
   setupTowers(){
     for (let i = 0; i < 3; i++) {
       let peg = $(`<ul class="p${i}"></ul>`);
+      this.el.append(peg);
+
+      for (let j = 3; j > 0; j--) {
+        peg.append($(`<li id='d${j}'></li>`));
+      }
       peg.on('click', () => {
-        console.log(i);
         if (!this.game.isWon()) {
           if (this.start === null) {
             this.start = i;
@@ -29,15 +33,11 @@ class HanoiView {
           this.render();
         }
       });
-      this.el.append(peg);
-
-      for (let j = 3; j > 0; j--) {
-        peg.append($(`<li id='d${j}'></li>`));
-      }
     }
   }
 
   render () {
+    console.log('first disk');
     console.log((this.game.towers[0][0] * 60));
     // console.log(this.game.towers);
     for (let i = 0; i < 3; i++) {
